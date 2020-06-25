@@ -1,0 +1,367 @@
+2020-06-22 00:08:26.311  INFO 3736 --- [http-nio-8888-exec-8] com.abc.controller.AuthController        : get user info, sessionId: 8C9807E043C01C199E39C2D13F36C8CC
+2020-06-22 00:08:26.474  INFO 3736 --- [http-nio-8888-exec-7] com.abc.controller.OptionController      : list role options
+2020-06-22 00:08:26.475  INFO 3736 --- [http-nio-8888-exec-9] com.abc.shiro.UserRealm                  : 获取角色权限信息: roles: [{"name":"超级管理员","val":"root"}], perms: [{"name":"所有权限","val":"*"}]
+2020-06-22 00:08:26.476 DEBUG 3736 --- [http-nio-8888-exec-7] com.abc.dao.SysRoleMapper.selectList     : ==>  Preparing: SELECT rid,rname,rval FROM sys_role 
+2020-06-22 00:08:26.476  INFO 3736 --- [http-nio-8888-exec-9] com.abc.controller.SysUserController     : query user, body: {"nick":null,"current":null,"size":null}
+2020-06-22 00:08:26.476 DEBUG 3736 --- [http-nio-8888-exec-7] com.abc.dao.SysRoleMapper.selectList     : ==> Parameters: 
+2020-06-22 00:08:26.478 DEBUG 3736 --- [http-nio-8888-exec-7] com.abc.dao.SysRoleMapper.selectList     : <==      Total: 11
+2020-06-22 00:08:26.480 DEBUG 3736 --- [http-nio-8888-exec-9] c.a.d.S.selectUserIncludeRoles           : ==>  Preparing: SELECT COUNT(1) FROM sys_user u LEFT JOIN sys_user_role ur ON u.uid = ur.user_id LEFT JOIN sys_role r ON ur.role_id = r.rid 
+2020-06-22 00:08:26.480 DEBUG 3736 --- [http-nio-8888-exec-9] c.a.d.S.selectUserIncludeRoles           : ==> Parameters: 
+2020-06-22 00:08:26.482 DEBUG 3736 --- [http-nio-8888-exec-9] c.a.d.S.selectUserIncludeRoles           : ==>  Preparing: select u.*, r.rid as role_rid, r.rname as role_rname, r.rdesc as role_rdesc, r.rval as role_rval, r.created as role_created, r.updated as role_updated from sys_user u left join sys_user_role ur on u.uid = ur.user_id left join sys_role r on ur.role_id = r.rid order by u.uid LIMIT 0,10 
+2020-06-22 00:08:26.483 DEBUG 3736 --- [http-nio-8888-exec-9] c.a.d.S.selectUserIncludeRoles           : ==> Parameters: 
+2020-06-22 00:08:26.486 DEBUG 3736 --- [http-nio-8888-exec-9] c.a.d.S.selectUserIncludeRoles           : <==      Total: 3
+2020-06-22 00:09:34.401  INFO 3736 --- [http-nio-8888-exec-2] com.abc.controller.AuthController        : get user info, sessionId: 8C9807E043C01C199E39C2D13F36C8CC
+2020-06-22 00:09:34.583  INFO 3736 --- [http-nio-8888-exec-1] com.abc.controller.OptionController      : list role options
+2020-06-22 00:09:34.583  INFO 3736 --- [http-nio-8888-exec-5] com.abc.shiro.UserRealm                  : 获取角色权限信息: roles: [{"name":"超级管理员","val":"root"}], perms: [{"name":"所有权限","val":"*"}]
+2020-06-22 00:09:34.584  INFO 3736 --- [http-nio-8888-exec-5] com.abc.controller.SysUserController     : query user, body: {"nick":null,"current":null,"size":null}
+2020-06-22 00:09:34.584 DEBUG 3736 --- [http-nio-8888-exec-1] com.abc.dao.SysRoleMapper.selectList     : ==>  Preparing: SELECT rid,rname,rval FROM sys_role 
+2020-06-22 00:09:34.584 DEBUG 3736 --- [http-nio-8888-exec-1] com.abc.dao.SysRoleMapper.selectList     : ==> Parameters: 
+2020-06-22 00:09:34.586 DEBUG 3736 --- [http-nio-8888-exec-1] com.abc.dao.SysRoleMapper.selectList     : <==      Total: 11
+2020-06-22 00:09:34.586 DEBUG 3736 --- [http-nio-8888-exec-5] c.a.d.S.selectUserIncludeRoles           : ==>  Preparing: SELECT COUNT(1) FROM sys_user u LEFT JOIN sys_user_role ur ON u.uid = ur.user_id LEFT JOIN sys_role r ON ur.role_id = r.rid 
+2020-06-22 00:09:34.587 DEBUG 3736 --- [http-nio-8888-exec-5] c.a.d.S.selectUserIncludeRoles           : ==> Parameters: 
+2020-06-22 00:09:34.589 DEBUG 3736 --- [http-nio-8888-exec-5] c.a.d.S.selectUserIncludeRoles           : ==>  Preparing: select u.*, r.rid as role_rid, r.rname as role_rname, r.rdesc as role_rdesc, r.rval as role_rval, r.created as role_created, r.updated as role_updated from sys_user u left join sys_user_role ur on u.uid = ur.user_id left join sys_role r on ur.role_id = r.rid order by u.uid LIMIT 0,10 
+2020-06-22 00:09:34.589 DEBUG 3736 --- [http-nio-8888-exec-5] c.a.d.S.selectUserIncludeRoles           : ==> Parameters: 
+2020-06-22 00:09:34.592 DEBUG 3736 --- [http-nio-8888-exec-5] c.a.d.S.selectUserIncludeRoles           : <==      Total: 3
+2020-06-22 00:10:31.590  INFO 3736 --- [http-nio-8888-exec-6] com.abc.shiro.UserRealm                  : 获取角色权限信息: roles: [{"name":"超级管理员","val":"root"}], perms: [{"name":"所有权限","val":"*"}]
+2020-06-22 00:10:31.591  INFO 3736 --- [http-nio-8888-exec-6] com.abc.controller.SysUserController     : update user, body: {"uid":"1002748102537822209","uname":"xiaowang","nick":"小王","pwd":"123456","salt":"Sqhvxsnc0HZSQEFKjBB9zQ==","lock":null,"created":"2020-06-22T03:05:52.000+0000","updated":null,"roleList":[{"rid":"1002748319131680769","rname":"普通用户","rdesc":"具有一般的权限，不具备系统菜单权限1","rval":"common","created":"2018-06-02T03:06:44.000+0000","updated":"2018-06-02T03:10:57.000+0000"}],"roles":[],"perms":[],"idx":1,"pwd2":"123456"}
+2020-06-22 00:10:31.654 DEBUG 3736 --- [http-nio-8888-exec-6] com.abc.dao.SysUserMapper.updateById     : ==>  Preparing: UPDATE sys_user SET nick=?, pwd=?, salt=?, updated=? WHERE uid=? 
+2020-06-22 00:10:31.656 DEBUG 3736 --- [http-nio-8888-exec-6] com.abc.dao.SysUserMapper.updateById     : ==> Parameters: 小王(String), ipgCUeyIMnZeXAp0D0f/FmVK7WFBr/6+XQ5tmyc66RM=(String), sus5vK9bXXPbwbiwpG8Jng==(String), 2020-06-22 00:10:31.637(Timestamp), 1002748102537822209(String)
+2020-06-22 00:10:31.657 DEBUG 3736 --- [http-nio-8888-exec-6] com.abc.dao.SysUserMapper.updateById     : <==    Updates: 1
+2020-06-22 00:13:36.833  INFO 3736 --- [http-nio-8888-exec-10] com.abc.shiro.UserRealm                  : 获取角色权限信息: roles: [{"name":"超级管理员","val":"root"}], perms: [{"name":"所有权限","val":"*"}]
+2020-06-22 00:13:36.834  INFO 3736 --- [http-nio-8888-exec-10] com.abc.controller.SysRoleController     : query role, body: {"rname":null,"current":null,"size":null}
+2020-06-22 00:13:36.837 DEBUG 3736 --- [http-nio-8888-exec-10] com.abc.dao.SysRoleMapper.selectPage     : ==>  Preparing: SELECT COUNT(1) FROM sys_role 
+2020-06-22 00:13:36.838 DEBUG 3736 --- [http-nio-8888-exec-10] com.abc.dao.SysRoleMapper.selectPage     : ==> Parameters: 
+2020-06-22 00:13:36.839 DEBUG 3736 --- [http-nio-8888-exec-10] com.abc.dao.SysRoleMapper.selectPage     : ==>  Preparing: SELECT rid AS rid,rname,rdesc,rval,created,updated FROM sys_role ORDER BY created DESC, updated DESC LIMIT 0,10 
+2020-06-22 00:13:36.839 DEBUG 3736 --- [http-nio-8888-exec-10] com.abc.dao.SysRoleMapper.selectPage     : ==> Parameters: 
+2020-06-22 00:13:36.840 DEBUG 3736 --- [http-nio-8888-exec-10] com.abc.dao.SysRoleMapper.selectPage     : <==      Total: 10
+2020-06-22 00:14:24.021  INFO 3736 --- [http-nio-8888-exec-3] com.abc.shiro.UserRealm                  : 获取角色权限信息: roles: [{"name":"超级管理员","val":"root"}], perms: [{"name":"所有权限","val":"*"}]
+2020-06-22 00:14:24.021  INFO 3736 --- [http-nio-8888-exec-3] com.abc.controller.SysRoleController     : query role, body: {"rname":null,"current":2,"size":10}
+2020-06-22 00:14:24.023 DEBUG 3736 --- [http-nio-8888-exec-3] com.abc.dao.SysRoleMapper.selectPage     : ==>  Preparing: SELECT COUNT(1) FROM sys_role 
+2020-06-22 00:14:24.023 DEBUG 3736 --- [http-nio-8888-exec-3] com.abc.dao.SysRoleMapper.selectPage     : ==> Parameters: 
+2020-06-22 00:14:24.024 DEBUG 3736 --- [http-nio-8888-exec-3] com.abc.dao.SysRoleMapper.selectPage     : ==>  Preparing: SELECT rid AS rid,rname,rdesc,rval,created,updated FROM sys_role ORDER BY created DESC, updated DESC LIMIT 10,10 
+2020-06-22 00:14:24.025 DEBUG 3736 --- [http-nio-8888-exec-3] com.abc.dao.SysRoleMapper.selectPage     : ==> Parameters: 
+2020-06-22 00:14:24.026 DEBUG 3736 --- [http-nio-8888-exec-3] com.abc.dao.SysRoleMapper.selectPage     : <==      Total: 1
+2020-06-22 00:14:27.602  INFO 3736 --- [http-nio-8888-exec-2] com.abc.shiro.UserRealm                  : 获取角色权限信息: roles: [{"name":"超级管理员","val":"root"}], perms: [{"name":"所有权限","val":"*"}]
+2020-06-22 00:14:27.603  INFO 3736 --- [http-nio-8888-exec-2] com.abc.controller.SysRoleController     : query role, body: {"rname":null,"current":1,"size":10}
+2020-06-22 00:14:27.605 DEBUG 3736 --- [http-nio-8888-exec-2] com.abc.dao.SysRoleMapper.selectPage     : ==>  Preparing: SELECT COUNT(1) FROM sys_role 
+2020-06-22 00:14:27.605 DEBUG 3736 --- [http-nio-8888-exec-2] com.abc.dao.SysRoleMapper.selectPage     : ==> Parameters: 
+2020-06-22 00:14:27.607 DEBUG 3736 --- [http-nio-8888-exec-2] com.abc.dao.SysRoleMapper.selectPage     : ==>  Preparing: SELECT rid AS rid,rname,rdesc,rval,created,updated FROM sys_role ORDER BY created DESC, updated DESC LIMIT 0,10 
+2020-06-22 00:14:27.607 DEBUG 3736 --- [http-nio-8888-exec-2] com.abc.dao.SysRoleMapper.selectPage     : ==> Parameters: 
+2020-06-22 00:14:27.608 DEBUG 3736 --- [http-nio-8888-exec-2] com.abc.dao.SysRoleMapper.selectPage     : <==      Total: 10
+2020-06-22 00:14:47.841  INFO 3736 --- [http-nio-8888-exec-1] com.abc.controller.AuthController        : get user info, sessionId: 8C9807E043C01C199E39C2D13F36C8CC
+2020-06-22 00:14:47.989  INFO 3736 --- [http-nio-8888-exec-5] com.abc.shiro.UserRealm                  : 获取角色权限信息: roles: [{"name":"超级管理员","val":"root"}], perms: [{"name":"所有权限","val":"*"}]
+2020-06-22 00:14:47.990  INFO 3736 --- [http-nio-8888-exec-5] com.abc.controller.SysRoleController     : query role, body: {"rname":null,"current":null,"size":null}
+2020-06-22 00:14:47.991 DEBUG 3736 --- [http-nio-8888-exec-5] com.abc.dao.SysRoleMapper.selectPage     : ==>  Preparing: SELECT COUNT(1) FROM sys_role 
+2020-06-22 00:14:47.992 DEBUG 3736 --- [http-nio-8888-exec-5] com.abc.dao.SysRoleMapper.selectPage     : ==> Parameters: 
+2020-06-22 00:14:47.993 DEBUG 3736 --- [http-nio-8888-exec-5] com.abc.dao.SysRoleMapper.selectPage     : ==>  Preparing: SELECT rid AS rid,rname,rdesc,rval,created,updated FROM sys_role ORDER BY created DESC, updated DESC LIMIT 0,10 
+2020-06-22 00:14:47.993 DEBUG 3736 --- [http-nio-8888-exec-5] com.abc.dao.SysRoleMapper.selectPage     : ==> Parameters: 
+2020-06-22 00:14:47.995 DEBUG 3736 --- [http-nio-8888-exec-5] com.abc.dao.SysRoleMapper.selectPage     : <==      Total: 10
+2020-06-22 00:14:52.907  INFO 3736 --- [http-nio-8888-exec-4] com.abc.controller.AuthController        : get user info, sessionId: 8C9807E043C01C199E39C2D13F36C8CC
+2020-06-22 00:14:53.029  INFO 3736 --- [http-nio-8888-exec-6] com.abc.shiro.UserRealm                  : 获取角色权限信息: roles: [{"name":"超级管理员","val":"root"}], perms: [{"name":"所有权限","val":"*"}]
+2020-06-22 00:14:53.029  INFO 3736 --- [http-nio-8888-exec-6] com.abc.controller.SysRoleController     : query role, body: {"rname":null,"current":null,"size":null}
+2020-06-22 00:14:53.030 DEBUG 3736 --- [http-nio-8888-exec-6] com.abc.dao.SysRoleMapper.selectPage     : ==>  Preparing: SELECT COUNT(1) FROM sys_role 
+2020-06-22 00:14:53.031 DEBUG 3736 --- [http-nio-8888-exec-6] com.abc.dao.SysRoleMapper.selectPage     : ==> Parameters: 
+2020-06-22 00:14:53.032 DEBUG 3736 --- [http-nio-8888-exec-6] com.abc.dao.SysRoleMapper.selectPage     : ==>  Preparing: SELECT rid AS rid,rname,rdesc,rval,created,updated FROM sys_role ORDER BY created DESC, updated DESC LIMIT 0,10 
+2020-06-22 00:14:53.032 DEBUG 3736 --- [http-nio-8888-exec-6] com.abc.dao.SysRoleMapper.selectPage     : ==> Parameters: 
+2020-06-22 00:14:53.033 DEBUG 3736 --- [http-nio-8888-exec-6] com.abc.dao.SysRoleMapper.selectPage     : <==      Total: 10
+2020-06-22 00:46:04.203  WARN 3736 --- [http-nio-8888-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved exception caused by Handler execution: org.apache.shiro.authz.UnauthenticatedException
+2020-06-22 00:46:04.207  WARN 3736 --- [http-nio-8888-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved exception caused by Handler execution: org.apache.shiro.authz.UnauthenticatedException
+2020-06-22 00:46:07.777  INFO 3736 --- [http-nio-8888-exec-5] com.abc.controller.AuthController        : user login, body: {"uname":"admin","pwd":"123456"}
+2020-06-22 00:46:07.779 DEBUG 3736 --- [http-nio-8888-exec-5] com.abc.dao.SysUserMapper.selectList     : ==>  Preparing: SELECT uid AS `uid`,uname,nick,pwd,salt,`lock`,created,updated FROM sys_user WHERE (uname = ?) 
+2020-06-22 00:46:07.780 DEBUG 3736 --- [http-nio-8888-exec-5] com.abc.dao.SysUserMapper.selectList     : ==> Parameters: admin(String)
+2020-06-22 00:46:07.781 DEBUG 3736 --- [http-nio-8888-exec-5] com.abc.dao.SysUserMapper.selectList     : <==      Total: 0
+2020-06-22 00:46:07.782  WARN 3736 --- [http-nio-8888-exec-5] com.abc.controller.AuthController        : 用户帐号不正确
+2020-06-22 00:46:09.227  INFO 3736 --- [http-nio-8888-exec-4] com.abc.controller.AuthController        : user login, body: {"uname":"admin","pwd":"123456"}
+2020-06-22 00:46:09.228 DEBUG 3736 --- [http-nio-8888-exec-4] com.abc.dao.SysUserMapper.selectList     : ==>  Preparing: SELECT uid AS `uid`,uname,nick,pwd,salt,`lock`,created,updated FROM sys_user WHERE (uname = ?) 
+2020-06-22 00:46:09.229 DEBUG 3736 --- [http-nio-8888-exec-4] com.abc.dao.SysUserMapper.selectList     : ==> Parameters: admin(String)
+2020-06-22 00:46:09.230 DEBUG 3736 --- [http-nio-8888-exec-4] com.abc.dao.SysUserMapper.selectList     : <==      Total: 0
+2020-06-22 00:46:09.231  WARN 3736 --- [http-nio-8888-exec-4] com.abc.controller.AuthController        : 用户帐号不正确
+2020-06-22 00:46:10.552  INFO 3736 --- [http-nio-8888-exec-6] com.abc.controller.AuthController        : user login, body: {"uname":"admin","pwd":"123456"}
+2020-06-22 00:46:10.553 DEBUG 3736 --- [http-nio-8888-exec-6] com.abc.dao.SysUserMapper.selectList     : ==>  Preparing: SELECT uid AS `uid`,uname,nick,pwd,salt,`lock`,created,updated FROM sys_user WHERE (uname = ?) 
+2020-06-22 00:46:10.554 DEBUG 3736 --- [http-nio-8888-exec-6] com.abc.dao.SysUserMapper.selectList     : ==> Parameters: admin(String)
+2020-06-22 00:46:10.554 DEBUG 3736 --- [http-nio-8888-exec-6] com.abc.dao.SysUserMapper.selectList     : <==      Total: 0
+2020-06-22 00:46:10.555  WARN 3736 --- [http-nio-8888-exec-6] com.abc.controller.AuthController        : 用户帐号不正确
+2020-06-22 00:46:37.467  INFO 3736 --- [http-nio-8888-exec-8] com.abc.controller.AuthController        : user login, body: {"uname":"admin","pwd":"123456"}
+2020-06-22 00:46:37.468 DEBUG 3736 --- [http-nio-8888-exec-8] com.abc.dao.SysUserMapper.selectList     : ==>  Preparing: SELECT uid AS `uid`,uname,nick,pwd,salt,`lock`,created,updated FROM sys_user WHERE (uname = ?) 
+2020-06-22 00:46:37.469 DEBUG 3736 --- [http-nio-8888-exec-8] com.abc.dao.SysUserMapper.selectList     : ==> Parameters: admin(String)
+2020-06-22 00:46:37.469 DEBUG 3736 --- [http-nio-8888-exec-8] com.abc.dao.SysUserMapper.selectList     : <==      Total: 0
+2020-06-22 00:46:37.470  WARN 3736 --- [http-nio-8888-exec-8] com.abc.controller.AuthController        : 用户帐号不正确
+2020-06-22 00:46:38.314  INFO 3736 --- [http-nio-8888-exec-7] com.abc.controller.AuthController        : user login, body: {"uname":"admin","pwd":"123456"}
+2020-06-22 00:46:38.316 DEBUG 3736 --- [http-nio-8888-exec-7] com.abc.dao.SysUserMapper.selectList     : ==>  Preparing: SELECT uid AS `uid`,uname,nick,pwd,salt,`lock`,created,updated FROM sys_user WHERE (uname = ?) 
+2020-06-22 00:46:38.316 DEBUG 3736 --- [http-nio-8888-exec-7] com.abc.dao.SysUserMapper.selectList     : ==> Parameters: admin(String)
+2020-06-22 00:46:38.317 DEBUG 3736 --- [http-nio-8888-exec-7] com.abc.dao.SysUserMapper.selectList     : <==      Total: 0
+2020-06-22 00:46:38.318  WARN 3736 --- [http-nio-8888-exec-7] com.abc.controller.AuthController        : 用户帐号不正确
+2020-06-22 00:46:38.761  INFO 3736 --- [http-nio-8888-exec-9] com.abc.controller.AuthController        : user login, body: {"uname":"admin","pwd":"123456"}
+2020-06-22 00:46:38.763 DEBUG 3736 --- [http-nio-8888-exec-9] com.abc.dao.SysUserMapper.selectList     : ==>  Preparing: SELECT uid AS `uid`,uname,nick,pwd,salt,`lock`,created,updated FROM sys_user WHERE (uname = ?) 
+2020-06-22 00:46:38.764 DEBUG 3736 --- [http-nio-8888-exec-9] com.abc.dao.SysUserMapper.selectList     : ==> Parameters: admin(String)
+2020-06-22 00:46:38.765 DEBUG 3736 --- [http-nio-8888-exec-9] com.abc.dao.SysUserMapper.selectList     : <==      Total: 0
+2020-06-22 00:46:38.765  WARN 3736 --- [http-nio-8888-exec-9] com.abc.controller.AuthController        : 用户帐号不正确
+2020-06-22 00:47:39.758  INFO 3736 --- [http-nio-8888-exec-5] com.abc.controller.AuthController        : user login, body: {"uname":"admin","pwd":"123456"}
+2020-06-22 00:47:39.760 DEBUG 3736 --- [http-nio-8888-exec-5] com.abc.dao.SysUserMapper.selectList     : ==>  Preparing: SELECT uid AS `uid`,uname,nick,pwd,salt,`lock`,created,updated FROM sys_user WHERE (uname = ?) 
+2020-06-22 00:47:39.760 DEBUG 3736 --- [http-nio-8888-exec-5] com.abc.dao.SysUserMapper.selectList     : ==> Parameters: admin(String)
+2020-06-22 00:47:39.761 DEBUG 3736 --- [http-nio-8888-exec-5] com.abc.dao.SysUserMapper.selectList     : <==      Total: 0
+2020-06-22 00:47:39.762  WARN 3736 --- [http-nio-8888-exec-5] com.abc.controller.AuthController        : 用户帐号不正确
+2020-06-22 00:48:11.306  INFO 3736 --- [http-nio-8888-exec-4] com.abc.controller.AuthController        : user login, body: {"uname":"admin","pwd":"123456"}
+2020-06-22 00:48:11.307 DEBUG 3736 --- [http-nio-8888-exec-4] com.abc.dao.SysUserMapper.selectList     : ==>  Preparing: SELECT uid AS `uid`,uname,nick,pwd,salt,`lock`,created,updated FROM sys_user WHERE (uname = ?) 
+2020-06-22 00:48:11.308 DEBUG 3736 --- [http-nio-8888-exec-4] com.abc.dao.SysUserMapper.selectList     : ==> Parameters: admin(String)
+2020-06-22 00:48:11.309 DEBUG 3736 --- [http-nio-8888-exec-4] com.abc.dao.SysUserMapper.selectList     : <==      Total: 0
+2020-06-22 00:48:11.310  WARN 3736 --- [http-nio-8888-exec-4] com.abc.controller.AuthController        : 用户帐号不正确
+2020-06-22 00:48:19.819  INFO 3736 --- [http-nio-8888-exec-6] com.abc.controller.AuthController        : user login, body: {"uname":"admin","pwd":"123456"}
+2020-06-22 00:48:19.820 DEBUG 3736 --- [http-nio-8888-exec-6] com.abc.dao.SysUserMapper.selectList     : ==>  Preparing: SELECT uid AS `uid`,uname,nick,pwd,salt,`lock`,created,updated FROM sys_user WHERE (uname = ?) 
+2020-06-22 00:48:19.821 DEBUG 3736 --- [http-nio-8888-exec-6] com.abc.dao.SysUserMapper.selectList     : ==> Parameters: admin(String)
+2020-06-22 00:48:19.822 DEBUG 3736 --- [http-nio-8888-exec-6] com.abc.dao.SysUserMapper.selectList     : <==      Total: 0
+2020-06-22 00:48:19.822  WARN 3736 --- [http-nio-8888-exec-6] com.abc.controller.AuthController        : 用户帐号不正确
+2020-06-22 00:48:26.994  INFO 3736 --- [http-nio-8888-exec-8] com.abc.controller.AuthController        : user login, body: {"uname":"admin","pwd":"123456"}
+2020-06-22 00:48:26.995 DEBUG 3736 --- [http-nio-8888-exec-8] com.abc.dao.SysUserMapper.selectList     : ==>  Preparing: SELECT uid AS `uid`,uname,nick,pwd,salt,`lock`,created,updated FROM sys_user WHERE (uname = ?) 
+2020-06-22 00:48:26.996 DEBUG 3736 --- [http-nio-8888-exec-8] com.abc.dao.SysUserMapper.selectList     : ==> Parameters: admin(String)
+2020-06-22 00:48:26.996 DEBUG 3736 --- [http-nio-8888-exec-8] com.abc.dao.SysUserMapper.selectList     : <==      Total: 0
+2020-06-22 00:48:26.997  WARN 3736 --- [http-nio-8888-exec-8] com.abc.controller.AuthController        : 用户帐号不正确
+2020-06-22 00:48:35.810  INFO 3736 --- [http-nio-8888-exec-7] com.abc.controller.AuthController        : user login, body: {"uname":"admin","pwd":"123456"}
+2020-06-22 00:48:35.812 DEBUG 3736 --- [http-nio-8888-exec-7] com.abc.dao.SysUserMapper.selectList     : ==>  Preparing: SELECT uid AS `uid`,uname,nick,pwd,salt,`lock`,created,updated FROM sys_user WHERE (uname = ?) 
+2020-06-22 00:48:35.812 DEBUG 3736 --- [http-nio-8888-exec-7] com.abc.dao.SysUserMapper.selectList     : ==> Parameters: admin(String)
+2020-06-22 00:48:35.813 DEBUG 3736 --- [http-nio-8888-exec-7] com.abc.dao.SysUserMapper.selectList     : <==      Total: 0
+2020-06-22 00:48:35.813  WARN 3736 --- [http-nio-8888-exec-7] com.abc.controller.AuthController        : 用户帐号不正确
+2020-06-22 00:48:44.915  INFO 3736 --- [http-nio-8888-exec-9] com.abc.controller.AuthController        : user login, body: {"uname":"admin","pwd":"123456"}
+2020-06-22 00:48:44.916 DEBUG 3736 --- [http-nio-8888-exec-9] com.abc.dao.SysUserMapper.selectList     : ==>  Preparing: SELECT uid AS `uid`,uname,nick,pwd,salt,`lock`,created,updated FROM sys_user WHERE (uname = ?) 
+2020-06-22 00:48:44.916 DEBUG 3736 --- [http-nio-8888-exec-9] com.abc.dao.SysUserMapper.selectList     : ==> Parameters: admin(String)
+2020-06-22 00:48:44.917 DEBUG 3736 --- [http-nio-8888-exec-9] com.abc.dao.SysUserMapper.selectList     : <==      Total: 0
+2020-06-22 00:48:44.918  WARN 3736 --- [http-nio-8888-exec-9] com.abc.controller.AuthController        : 用户帐号不正确
+2020-06-22 00:51:15.817  INFO 3736 --- [http-nio-8888-exec-3] com.abc.controller.AuthController        : user login, body: {"uname":"admin","pwd":"123456"}
+2020-06-22 00:51:15.819 DEBUG 3736 --- [http-nio-8888-exec-3] com.abc.dao.SysUserMapper.selectList     : ==>  Preparing: SELECT uid AS `uid`,uname,nick,pwd,salt,`lock`,created,updated FROM sys_user WHERE (uname = ?) 
+2020-06-22 00:51:15.819 DEBUG 3736 --- [http-nio-8888-exec-3] com.abc.dao.SysUserMapper.selectList     : ==> Parameters: admin(String)
+2020-06-22 00:51:15.820 DEBUG 3736 --- [http-nio-8888-exec-3] com.abc.dao.SysUserMapper.selectList     : <==      Total: 0
+2020-06-22 00:51:15.821  WARN 3736 --- [http-nio-8888-exec-3] com.abc.controller.AuthController        : 用户帐号不正确
+2020-06-22 00:51:41.364  INFO 3736 --- [http-nio-8888-exec-1] com.abc.controller.AuthController        : user login, body: {"uname":"admin","pwd":"123456"}
+2020-06-22 00:51:41.365 DEBUG 3736 --- [http-nio-8888-exec-1] com.abc.dao.SysUserMapper.selectList     : ==>  Preparing: SELECT uid AS `uid`,uname,nick,pwd,salt,`lock`,created,updated FROM sys_user WHERE (uname = ?) 
+2020-06-22 00:51:41.365 DEBUG 3736 --- [http-nio-8888-exec-1] com.abc.dao.SysUserMapper.selectList     : ==> Parameters: admin(String)
+2020-06-22 00:51:41.366 DEBUG 3736 --- [http-nio-8888-exec-1] com.abc.dao.SysUserMapper.selectList     : <==      Total: 0
+2020-06-22 00:51:41.367  WARN 3736 --- [http-nio-8888-exec-1] com.abc.controller.AuthController        : 用户帐号不正确
+2020-06-22 00:51:42.829  INFO 3736 --- [http-nio-8888-exec-5] com.abc.controller.AuthController        : user login, body: {"uname":"admin","pwd":"123456"}
+2020-06-22 00:51:42.830 DEBUG 3736 --- [http-nio-8888-exec-5] com.abc.dao.SysUserMapper.selectList     : ==>  Preparing: SELECT uid AS `uid`,uname,nick,pwd,salt,`lock`,created,updated FROM sys_user WHERE (uname = ?) 
+2020-06-22 00:51:42.830 DEBUG 3736 --- [http-nio-8888-exec-5] com.abc.dao.SysUserMapper.selectList     : ==> Parameters: admin(String)
+2020-06-22 00:51:42.831 DEBUG 3736 --- [http-nio-8888-exec-5] com.abc.dao.SysUserMapper.selectList     : <==      Total: 0
+2020-06-22 00:51:42.832  WARN 3736 --- [http-nio-8888-exec-5] com.abc.controller.AuthController        : 用户帐号不正确
+2020-06-22 00:51:43.482  INFO 3736 --- [http-nio-8888-exec-4] com.abc.controller.AuthController        : user login, body: {"uname":"admin","pwd":"123456"}
+2020-06-22 00:51:43.483 DEBUG 3736 --- [http-nio-8888-exec-4] com.abc.dao.SysUserMapper.selectList     : ==>  Preparing: SELECT uid AS `uid`,uname,nick,pwd,salt,`lock`,created,updated FROM sys_user WHERE (uname = ?) 
+2020-06-22 00:51:43.484 DEBUG 3736 --- [http-nio-8888-exec-4] com.abc.dao.SysUserMapper.selectList     : ==> Parameters: admin(String)
+2020-06-22 00:51:43.487 DEBUG 3736 --- [http-nio-8888-exec-4] com.abc.dao.SysUserMapper.selectList     : <==      Total: 0
+2020-06-22 00:51:43.488  WARN 3736 --- [http-nio-8888-exec-4] com.abc.controller.AuthController        : 用户帐号不正确
+2020-06-22 00:51:44.013  INFO 3736 --- [http-nio-8888-exec-6] com.abc.controller.AuthController        : user login, body: {"uname":"admin","pwd":"123456"}
+2020-06-22 00:51:44.014 DEBUG 3736 --- [http-nio-8888-exec-6] com.abc.dao.SysUserMapper.selectList     : ==>  Preparing: SELECT uid AS `uid`,uname,nick,pwd,salt,`lock`,created,updated FROM sys_user WHERE (uname = ?) 
+2020-06-22 00:51:44.015 DEBUG 3736 --- [http-nio-8888-exec-6] com.abc.dao.SysUserMapper.selectList     : ==> Parameters: admin(String)
+2020-06-22 00:51:44.015 DEBUG 3736 --- [http-nio-8888-exec-6] com.abc.dao.SysUserMapper.selectList     : <==      Total: 0
+2020-06-22 00:51:44.016  WARN 3736 --- [http-nio-8888-exec-6] com.abc.controller.AuthController        : 用户帐号不正确
+2020-06-22 00:51:44.231  INFO 3736 --- [http-nio-8888-exec-8] com.abc.controller.AuthController        : user login, body: {"uname":"admin","pwd":"123456"}
+2020-06-22 00:51:44.232 DEBUG 3736 --- [http-nio-8888-exec-8] com.abc.dao.SysUserMapper.selectList     : ==>  Preparing: SELECT uid AS `uid`,uname,nick,pwd,salt,`lock`,created,updated FROM sys_user WHERE (uname = ?) 
+2020-06-22 00:51:44.233 DEBUG 3736 --- [http-nio-8888-exec-8] com.abc.dao.SysUserMapper.selectList     : ==> Parameters: admin(String)
+2020-06-22 00:51:44.233 DEBUG 3736 --- [http-nio-8888-exec-8] com.abc.dao.SysUserMapper.selectList     : <==      Total: 0
+2020-06-22 00:51:44.234  WARN 3736 --- [http-nio-8888-exec-8] com.abc.controller.AuthController        : 用户帐号不正确
+2020-06-22 00:51:44.483  INFO 3736 --- [http-nio-8888-exec-7] com.abc.controller.AuthController        : user login, body: {"uname":"admin","pwd":"123456"}
+2020-06-22 00:51:44.485 DEBUG 3736 --- [http-nio-8888-exec-7] com.abc.dao.SysUserMapper.selectList     : ==>  Preparing: SELECT uid AS `uid`,uname,nick,pwd,salt,`lock`,created,updated FROM sys_user WHERE (uname = ?) 
+2020-06-22 00:51:44.485 DEBUG 3736 --- [http-nio-8888-exec-7] com.abc.dao.SysUserMapper.selectList     : ==> Parameters: admin(String)
+2020-06-22 00:51:44.486 DEBUG 3736 --- [http-nio-8888-exec-7] com.abc.dao.SysUserMapper.selectList     : <==      Total: 0
+2020-06-22 00:51:44.486  WARN 3736 --- [http-nio-8888-exec-7] com.abc.controller.AuthController        : 用户帐号不正确
+2020-06-22 00:51:44.683  INFO 3736 --- [http-nio-8888-exec-9] com.abc.controller.AuthController        : user login, body: {"uname":"admin","pwd":"123456"}
+2020-06-22 00:51:44.684 DEBUG 3736 --- [http-nio-8888-exec-9] com.abc.dao.SysUserMapper.selectList     : ==>  Preparing: SELECT uid AS `uid`,uname,nick,pwd,salt,`lock`,created,updated FROM sys_user WHERE (uname = ?) 
+2020-06-22 00:51:44.685 DEBUG 3736 --- [http-nio-8888-exec-9] com.abc.dao.SysUserMapper.selectList     : ==> Parameters: admin(String)
+2020-06-22 00:51:44.685 DEBUG 3736 --- [http-nio-8888-exec-9] com.abc.dao.SysUserMapper.selectList     : <==      Total: 0
+2020-06-22 00:51:44.686  WARN 3736 --- [http-nio-8888-exec-9] com.abc.controller.AuthController        : 用户帐号不正确
+2020-06-22 00:51:44.883  INFO 3736 --- [http-nio-8888-exec-10] com.abc.controller.AuthController        : user login, body: {"uname":"admin","pwd":"123456"}
+2020-06-22 00:51:44.884 DEBUG 3736 --- [http-nio-8888-exec-10] com.abc.dao.SysUserMapper.selectList     : ==>  Preparing: SELECT uid AS `uid`,uname,nick,pwd,salt,`lock`,created,updated FROM sys_user WHERE (uname = ?) 
+2020-06-22 00:51:44.884 DEBUG 3736 --- [http-nio-8888-exec-10] com.abc.dao.SysUserMapper.selectList     : ==> Parameters: admin(String)
+2020-06-22 00:51:44.885 DEBUG 3736 --- [http-nio-8888-exec-10] com.abc.dao.SysUserMapper.selectList     : <==      Total: 0
+2020-06-22 00:51:44.885  WARN 3736 --- [http-nio-8888-exec-10] com.abc.controller.AuthController        : 用户帐号不正确
+2020-06-22 00:51:45.308  INFO 3736 --- [http-nio-8888-exec-3] com.abc.controller.AuthController        : user login, body: {"uname":"admin","pwd":"123456"}
+2020-06-22 00:51:45.308 DEBUG 3736 --- [http-nio-8888-exec-3] com.abc.dao.SysUserMapper.selectList     : ==>  Preparing: SELECT uid AS `uid`,uname,nick,pwd,salt,`lock`,created,updated FROM sys_user WHERE (uname = ?) 
+2020-06-22 00:51:45.309 DEBUG 3736 --- [http-nio-8888-exec-3] com.abc.dao.SysUserMapper.selectList     : ==> Parameters: admin(String)
+2020-06-22 00:51:45.310 DEBUG 3736 --- [http-nio-8888-exec-3] com.abc.dao.SysUserMapper.selectList     : <==      Total: 0
+2020-06-22 00:51:45.310  WARN 3736 --- [http-nio-8888-exec-3] com.abc.controller.AuthController        : 用户帐号不正确
+2020-06-22 00:51:53.410  INFO 3736 --- [http-nio-8888-exec-2] com.abc.controller.AuthController        : user login, body: {"uname":"admin","pwd":"123456"}
+2020-06-22 00:51:53.412 DEBUG 3736 --- [http-nio-8888-exec-2] com.abc.dao.SysUserMapper.selectList     : ==>  Preparing: SELECT uid AS `uid`,uname,nick,pwd,salt,`lock`,created,updated FROM sys_user WHERE (uname = ?) 
+2020-06-22 00:51:53.412 DEBUG 3736 --- [http-nio-8888-exec-2] com.abc.dao.SysUserMapper.selectList     : ==> Parameters: admin(String)
+2020-06-22 00:51:53.413 DEBUG 3736 --- [http-nio-8888-exec-2] com.abc.dao.SysUserMapper.selectList     : <==      Total: 0
+2020-06-22 00:51:53.413  WARN 3736 --- [http-nio-8888-exec-2] com.abc.controller.AuthController        : 用户帐号不正确
+2020-06-22 00:52:17.652  INFO 3736 --- [http-nio-8888-exec-1] com.abc.controller.AuthController        : user login, body: {"uname":"admin","pwd":"123456"}
+2020-06-22 00:52:17.654 DEBUG 3736 --- [http-nio-8888-exec-1] com.abc.dao.SysUserMapper.selectList     : ==>  Preparing: SELECT uid AS `uid`,uname,nick,pwd,salt,`lock`,created,updated FROM sys_user WHERE (uname = ?) 
+2020-06-22 00:52:17.654 DEBUG 3736 --- [http-nio-8888-exec-1] com.abc.dao.SysUserMapper.selectList     : ==> Parameters: admin(String)
+2020-06-22 00:52:17.655 DEBUG 3736 --- [http-nio-8888-exec-1] com.abc.dao.SysUserMapper.selectList     : <==      Total: 0
+2020-06-22 00:52:17.656  WARN 3736 --- [http-nio-8888-exec-1] com.abc.controller.AuthController        : 用户帐号不正确
+2020-06-22 00:52:19.777  INFO 3736 --- [http-nio-8888-exec-5] com.abc.controller.AuthController        : user login, body: {"uname":"admin","pwd":"123456"}
+2020-06-22 00:52:19.779 DEBUG 3736 --- [http-nio-8888-exec-5] com.abc.dao.SysUserMapper.selectList     : ==>  Preparing: SELECT uid AS `uid`,uname,nick,pwd,salt,`lock`,created,updated FROM sys_user WHERE (uname = ?) 
+2020-06-22 00:52:19.779 DEBUG 3736 --- [http-nio-8888-exec-5] com.abc.dao.SysUserMapper.selectList     : ==> Parameters: admin(String)
+2020-06-22 00:52:19.780 DEBUG 3736 --- [http-nio-8888-exec-5] com.abc.dao.SysUserMapper.selectList     : <==      Total: 0
+2020-06-22 00:52:19.781  WARN 3736 --- [http-nio-8888-exec-5] com.abc.controller.AuthController        : 用户帐号不正确
+2020-06-22 00:52:19.990  INFO 3736 --- [http-nio-8888-exec-4] com.abc.controller.AuthController        : user login, body: {"uname":"admin","pwd":"123456"}
+2020-06-22 00:52:19.991 DEBUG 3736 --- [http-nio-8888-exec-4] com.abc.dao.SysUserMapper.selectList     : ==>  Preparing: SELECT uid AS `uid`,uname,nick,pwd,salt,`lock`,created,updated FROM sys_user WHERE (uname = ?) 
+2020-06-22 00:52:19.992 DEBUG 3736 --- [http-nio-8888-exec-4] com.abc.dao.SysUserMapper.selectList     : ==> Parameters: admin(String)
+2020-06-22 00:52:19.993 DEBUG 3736 --- [http-nio-8888-exec-4] com.abc.dao.SysUserMapper.selectList     : <==      Total: 0
+2020-06-22 00:52:19.994  WARN 3736 --- [http-nio-8888-exec-4] com.abc.controller.AuthController        : 用户帐号不正确
+2020-06-22 00:52:20.235  INFO 3736 --- [http-nio-8888-exec-6] com.abc.controller.AuthController        : user login, body: {"uname":"admin","pwd":"123456"}
+2020-06-22 00:52:20.236 DEBUG 3736 --- [http-nio-8888-exec-6] com.abc.dao.SysUserMapper.selectList     : ==>  Preparing: SELECT uid AS `uid`,uname,nick,pwd,salt,`lock`,created,updated FROM sys_user WHERE (uname = ?) 
+2020-06-22 00:52:20.236 DEBUG 3736 --- [http-nio-8888-exec-6] com.abc.dao.SysUserMapper.selectList     : ==> Parameters: admin(String)
+2020-06-22 00:52:20.236 DEBUG 3736 --- [http-nio-8888-exec-6] com.abc.dao.SysUserMapper.selectList     : <==      Total: 0
+2020-06-22 00:52:20.237  WARN 3736 --- [http-nio-8888-exec-6] com.abc.controller.AuthController        : 用户帐号不正确
+2020-06-22 00:52:44.231  INFO 3736 --- [http-nio-8888-exec-7] com.abc.controller.AuthController        : user login, body: {"uname":"guanyu","pwd":"123456"}
+2020-06-22 00:52:44.232 DEBUG 3736 --- [http-nio-8888-exec-7] com.abc.dao.SysUserMapper.selectList     : ==>  Preparing: SELECT uid AS `uid`,uname,nick,pwd,salt,`lock`,created,updated FROM sys_user WHERE (uname = ?) 
+2020-06-22 00:52:44.232 DEBUG 3736 --- [http-nio-8888-exec-7] com.abc.dao.SysUserMapper.selectList     : ==> Parameters: guanyu(String)
+2020-06-22 00:52:44.234 DEBUG 3736 --- [http-nio-8888-exec-7] com.abc.dao.SysUserMapper.selectList     : <==      Total: 0
+2020-06-22 00:52:44.234  WARN 3736 --- [http-nio-8888-exec-7] com.abc.controller.AuthController        : 用户帐号不正确
+2020-06-22 00:52:50.244  INFO 3736 --- [http-nio-8888-exec-9] com.abc.controller.AuthController        : user login, body: {"uname":"admin","pwd":"123456"}
+2020-06-22 00:52:50.244 DEBUG 3736 --- [http-nio-8888-exec-9] com.abc.dao.SysUserMapper.selectList     : ==>  Preparing: SELECT uid AS `uid`,uname,nick,pwd,salt,`lock`,created,updated FROM sys_user WHERE (uname = ?) 
+2020-06-22 00:52:50.245 DEBUG 3736 --- [http-nio-8888-exec-9] com.abc.dao.SysUserMapper.selectList     : ==> Parameters: admin(String)
+2020-06-22 00:52:50.245 DEBUG 3736 --- [http-nio-8888-exec-9] com.abc.dao.SysUserMapper.selectList     : <==      Total: 0
+2020-06-22 00:52:50.246  WARN 3736 --- [http-nio-8888-exec-9] com.abc.controller.AuthController        : 用户帐号不正确
+2020-06-22 00:53:04.015  INFO 3736 --- [http-nio-8888-exec-10] com.abc.controller.AuthController        : user login, body: {"uname":"xiaoli","pwd":"123456"}
+2020-06-22 00:53:04.016 DEBUG 3736 --- [http-nio-8888-exec-10] com.abc.dao.SysUserMapper.selectList     : ==>  Preparing: SELECT uid AS `uid`,uname,nick,pwd,salt,`lock`,created,updated FROM sys_user WHERE (uname = ?) 
+2020-06-22 00:53:04.017 DEBUG 3736 --- [http-nio-8888-exec-10] com.abc.dao.SysUserMapper.selectList     : ==> Parameters: xiaoli(String)
+2020-06-22 00:53:04.018 DEBUG 3736 --- [http-nio-8888-exec-10] com.abc.dao.SysUserMapper.selectList     : <==      Total: 1
+2020-06-22 00:53:04.019 DEBUG 3736 --- [http-nio-8888-exec-10] c.a.dao.SysRoleMapper.getRolesByUserId   : ==>  Preparing: SELECT r.rname,r.rval FROM sys_role r, sys_user_role ur WHERE r.rid = ur.role_id AND ur.user_id = ? 
+2020-06-22 00:53:04.019 DEBUG 3736 --- [http-nio-8888-exec-10] c.a.dao.SysRoleMapper.getRolesByUserId   : ==> Parameters: 1002748017179541505(String)
+2020-06-22 00:53:04.020 DEBUG 3736 --- [http-nio-8888-exec-10] c.a.dao.SysRoleMapper.getRolesByUserId   : <==      Total: 1
+2020-06-22 00:53:04.022 DEBUG 3736 --- [http-nio-8888-exec-10] c.a.dao.SysPermMapper.getPermsByUserId   : ==>  Preparing: SELECT p.pname,p.pval FROM sys_perm p, sys_role_perm rp, sys_user_role ur WHERE p.pval = rp.perm_val AND ur.role_id = rp.role_id AND ur.user_id = ? 
+2020-06-22 00:53:04.022 DEBUG 3736 --- [http-nio-8888-exec-10] c.a.dao.SysPermMapper.getPermsByUserId   : ==> Parameters: 1002748017179541505(String)
+2020-06-22 00:53:04.023 DEBUG 3736 --- [http-nio-8888-exec-10] c.a.dao.SysPermMapper.getPermsByUserId   : <==      Total: 5
+2020-06-22 00:53:04.025  INFO 3736 --- [http-nio-8888-exec-10] com.abc.controller.AuthController        : user login: xiaoli, sessionId: 73AD202F4931C97252FEB42E59CF682E
+2020-06-22 00:53:04.051  INFO 3736 --- [http-nio-8888-exec-2] com.abc.controller.AuthController        : get user info, sessionId: 73AD202F4931C97252FEB42E59CF682E
+2020-06-22 00:53:21.483  INFO 3736 --- [http-nio-8888-exec-4] com.abc.controller.OptionController      : list role options
+2020-06-22 00:53:21.484 DEBUG 3736 --- [http-nio-8888-exec-4] com.abc.dao.SysRoleMapper.selectList     : ==>  Preparing: SELECT rid,rname,rval FROM sys_role 
+2020-06-22 00:53:21.484 DEBUG 3736 --- [http-nio-8888-exec-4] com.abc.dao.SysRoleMapper.selectList     : ==> Parameters: 
+2020-06-22 00:53:21.485  INFO 3736 --- [http-nio-8888-exec-6] com.abc.shiro.UserRealm                  : 获取角色权限信息: roles: [{"name":"普通用户","val":"common"}], perms: [{"name":"用户管理","val":"m:sys:user"}, {"name":"系统","val":"m:sys"}, {"name":"系统权限模块","val":"a:sys:perm"}, {"name":"update","val":"a:perm:update"}, {"name":"添加用户","val":"b:user:add"}]
+2020-06-22 00:53:21.486 DEBUG 3736 --- [http-nio-8888-exec-4] com.abc.dao.SysRoleMapper.selectList     : <==      Total: 11
+2020-06-22 00:53:21.487  WARN 3736 --- [http-nio-8888-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved exception caused by Handler execution: org.apache.shiro.authz.UnauthorizedException: Subject does not have permission [a:sys:user:list]
+2020-06-22 00:53:26.116  INFO 3736 --- [http-nio-8888-exec-8] com.abc.controller.OptionController      : list role options
+2020-06-22 00:53:26.118 DEBUG 3736 --- [http-nio-8888-exec-8] com.abc.dao.SysRoleMapper.selectList     : ==>  Preparing: SELECT rid,rname,rval FROM sys_role 
+2020-06-22 00:53:26.118  INFO 3736 --- [http-nio-8888-exec-7] com.abc.shiro.UserRealm                  : 获取角色权限信息: roles: [{"name":"普通用户","val":"common"}], perms: [{"name":"用户管理","val":"m:sys:user"}, {"name":"系统","val":"m:sys"}, {"name":"系统权限模块","val":"a:sys:perm"}, {"name":"update","val":"a:perm:update"}, {"name":"添加用户","val":"b:user:add"}]
+2020-06-22 00:53:26.119 DEBUG 3736 --- [http-nio-8888-exec-8] com.abc.dao.SysRoleMapper.selectList     : ==> Parameters: 
+2020-06-22 00:53:26.120 DEBUG 3736 --- [http-nio-8888-exec-8] com.abc.dao.SysRoleMapper.selectList     : <==      Total: 11
+2020-06-22 00:53:26.121  WARN 3736 --- [http-nio-8888-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved exception caused by Handler execution: org.apache.shiro.authz.UnauthorizedException: Subject does not have permission [a:sys:user:list]
+2020-06-22 00:53:32.964  INFO 3736 --- [http-nio-8888-exec-9] com.abc.controller.AuthController        : get user info, sessionId: 73AD202F4931C97252FEB42E59CF682E
+2020-06-22 00:53:49.998  INFO 3736 --- [http-nio-8888-exec-10] com.abc.controller.AuthController        : get user info, sessionId: 73AD202F4931C97252FEB42E59CF682E
+2020-06-22 00:53:55.100  INFO 3736 --- [http-nio-8888-exec-2] com.abc.controller.AuthController        : user logout
+2020-06-22 00:54:13.827  INFO 3736 --- [http-nio-8888-exec-1] com.abc.controller.AuthController        : user login, body: {"uname":"xiaoliu","pwd":"123456"}
+2020-06-22 00:54:13.828 DEBUG 3736 --- [http-nio-8888-exec-1] com.abc.dao.SysUserMapper.selectList     : ==>  Preparing: SELECT uid AS `uid`,uname,nick,pwd,salt,`lock`,created,updated FROM sys_user WHERE (uname = ?) 
+2020-06-22 00:54:13.829 DEBUG 3736 --- [http-nio-8888-exec-1] com.abc.dao.SysUserMapper.selectList     : ==> Parameters: xiaoliu(String)
+2020-06-22 00:54:13.830 DEBUG 3736 --- [http-nio-8888-exec-1] com.abc.dao.SysUserMapper.selectList     : <==      Total: 1
+2020-06-22 00:54:13.831 DEBUG 3736 --- [http-nio-8888-exec-1] c.a.dao.SysRoleMapper.getRolesByUserId   : ==>  Preparing: SELECT r.rname,r.rval FROM sys_role r, sys_user_role ur WHERE r.rid = ur.role_id AND ur.user_id = ? 
+2020-06-22 00:54:13.831 DEBUG 3736 --- [http-nio-8888-exec-1] c.a.dao.SysRoleMapper.getRolesByUserId   : ==> Parameters: 986177923098808322(String)
+2020-06-22 00:54:13.832 DEBUG 3736 --- [http-nio-8888-exec-1] c.a.dao.SysRoleMapper.getRolesByUserId   : <==      Total: 1
+2020-06-22 00:54:13.832 DEBUG 3736 --- [http-nio-8888-exec-1] c.a.dao.SysPermMapper.getPermsByUserId   : ==>  Preparing: SELECT p.pname,p.pval FROM sys_perm p, sys_role_perm rp, sys_user_role ur WHERE p.pval = rp.perm_val AND ur.role_id = rp.role_id AND ur.user_id = ? 
+2020-06-22 00:54:13.833 DEBUG 3736 --- [http-nio-8888-exec-1] c.a.dao.SysPermMapper.getPermsByUserId   : ==> Parameters: 986177923098808322(String)
+2020-06-22 00:54:13.833 DEBUG 3736 --- [http-nio-8888-exec-1] c.a.dao.SysPermMapper.getPermsByUserId   : <==      Total: 1
+2020-06-22 00:54:13.835  INFO 3736 --- [http-nio-8888-exec-1] com.abc.controller.AuthController        : user login: xiaoliu, sessionId: 1E6EE3F68F87C9DFD6035FA07C7872FB
+2020-06-22 00:54:13.866  INFO 3736 --- [http-nio-8888-exec-4] com.abc.controller.AuthController        : get user info, sessionId: 1E6EE3F68F87C9DFD6035FA07C7872FB
+2020-06-22 00:54:18.491  INFO 3736 --- [http-nio-8888-exec-6] com.abc.controller.OptionController      : list role options
+2020-06-22 00:54:18.492 DEBUG 3736 --- [http-nio-8888-exec-6] com.abc.dao.SysRoleMapper.selectList     : ==>  Preparing: SELECT rid,rname,rval FROM sys_role 
+2020-06-22 00:54:18.492 DEBUG 3736 --- [http-nio-8888-exec-6] com.abc.dao.SysRoleMapper.selectList     : ==> Parameters: 
+2020-06-22 00:54:18.492  INFO 3736 --- [http-nio-8888-exec-7] com.abc.shiro.UserRealm                  : 获取角色权限信息: roles: [{"name":"超级管理员","val":"root"}], perms: [{"name":"所有权限","val":"*"}]
+2020-06-22 00:54:18.492  INFO 3736 --- [http-nio-8888-exec-7] com.abc.controller.SysUserController     : query user, body: {"nick":null,"current":null,"size":null}
+2020-06-22 00:54:18.493 DEBUG 3736 --- [http-nio-8888-exec-6] com.abc.dao.SysRoleMapper.selectList     : <==      Total: 11
+2020-06-22 00:54:18.495 DEBUG 3736 --- [http-nio-8888-exec-7] c.a.d.S.selectUserIncludeRoles           : ==>  Preparing: SELECT COUNT(1) FROM sys_user u LEFT JOIN sys_user_role ur ON u.uid = ur.user_id LEFT JOIN sys_role r ON ur.role_id = r.rid 
+2020-06-22 00:54:18.495 DEBUG 3736 --- [http-nio-8888-exec-7] c.a.d.S.selectUserIncludeRoles           : ==> Parameters: 
+2020-06-22 00:54:18.497 DEBUG 3736 --- [http-nio-8888-exec-7] c.a.d.S.selectUserIncludeRoles           : ==>  Preparing: select u.*, r.rid as role_rid, r.rname as role_rname, r.rdesc as role_rdesc, r.rval as role_rval, r.created as role_created, r.updated as role_updated from sys_user u left join sys_user_role ur on u.uid = ur.user_id left join sys_role r on ur.role_id = r.rid order by u.uid LIMIT 0,10 
+2020-06-22 00:54:18.497 DEBUG 3736 --- [http-nio-8888-exec-7] c.a.d.S.selectUserIncludeRoles           : ==> Parameters: 
+2020-06-22 00:54:18.498 DEBUG 3736 --- [http-nio-8888-exec-7] c.a.d.S.selectUserIncludeRoles           : <==      Total: 3
+2020-06-22 00:57:00.495  INFO 3736 --- [http-nio-8888-exec-2] com.abc.controller.AuthController        : user logout
+2020-06-22 00:58:46.692  INFO 3736 --- [http-nio-8888-exec-5] com.abc.controller.AuthController        : user login, body: {"uname":"xiaoliu","pwd":"123456"}
+2020-06-22 00:58:46.694 DEBUG 3736 --- [http-nio-8888-exec-5] com.abc.dao.SysUserMapper.selectList     : ==>  Preparing: SELECT uid AS `uid`,uname,nick,pwd,salt,`lock`,created,updated FROM sys_user WHERE (uname = ?) 
+2020-06-22 00:58:46.695 DEBUG 3736 --- [http-nio-8888-exec-5] com.abc.dao.SysUserMapper.selectList     : ==> Parameters: xiaoliu(String)
+2020-06-22 00:58:46.696 DEBUG 3736 --- [http-nio-8888-exec-5] com.abc.dao.SysUserMapper.selectList     : <==      Total: 1
+2020-06-22 00:58:46.697 DEBUG 3736 --- [http-nio-8888-exec-5] c.a.dao.SysRoleMapper.getRolesByUserId   : ==>  Preparing: SELECT r.rname,r.rval FROM sys_role r, sys_user_role ur WHERE r.rid = ur.role_id AND ur.user_id = ? 
+2020-06-22 00:58:46.698 DEBUG 3736 --- [http-nio-8888-exec-5] c.a.dao.SysRoleMapper.getRolesByUserId   : ==> Parameters: 986177923098808322(String)
+2020-06-22 00:58:46.699 DEBUG 3736 --- [http-nio-8888-exec-5] c.a.dao.SysRoleMapper.getRolesByUserId   : <==      Total: 1
+2020-06-22 00:58:46.700 DEBUG 3736 --- [http-nio-8888-exec-5] c.a.dao.SysPermMapper.getPermsByUserId   : ==>  Preparing: SELECT p.pname,p.pval FROM sys_perm p, sys_role_perm rp, sys_user_role ur WHERE p.pval = rp.perm_val AND ur.role_id = rp.role_id AND ur.user_id = ? 
+2020-06-22 00:58:46.701 DEBUG 3736 --- [http-nio-8888-exec-5] c.a.dao.SysPermMapper.getPermsByUserId   : ==> Parameters: 986177923098808322(String)
+2020-06-22 00:58:46.701 DEBUG 3736 --- [http-nio-8888-exec-5] c.a.dao.SysPermMapper.getPermsByUserId   : <==      Total: 1
+2020-06-22 00:58:46.703  INFO 3736 --- [http-nio-8888-exec-5] com.abc.controller.AuthController        : user login: xiaoliu, sessionId: DE82E0A6BA30F163774A96B12532DD99
+2020-06-22 00:58:46.726  INFO 3736 --- [http-nio-8888-exec-6] com.abc.controller.AuthController        : get user info, sessionId: DE82E0A6BA30F163774A96B12532DD99
+2020-06-22 00:58:50.894  INFO 3736 --- [http-nio-8888-exec-7] com.abc.controller.OptionController      : list role options
+2020-06-22 00:58:50.895 DEBUG 3736 --- [http-nio-8888-exec-7] com.abc.dao.SysRoleMapper.selectList     : ==>  Preparing: SELECT rid,rname,rval FROM sys_role 
+2020-06-22 00:58:50.895 DEBUG 3736 --- [http-nio-8888-exec-7] com.abc.dao.SysRoleMapper.selectList     : ==> Parameters: 
+2020-06-22 00:58:50.895  INFO 3736 --- [http-nio-8888-exec-8] com.abc.shiro.UserRealm                  : 获取角色权限信息: roles: [{"name":"超级管理员","val":"root"}], perms: [{"name":"所有权限","val":"*"}]
+2020-06-22 00:58:50.896 DEBUG 3736 --- [http-nio-8888-exec-7] com.abc.dao.SysRoleMapper.selectList     : <==      Total: 11
+2020-06-22 00:58:50.896  INFO 3736 --- [http-nio-8888-exec-8] com.abc.controller.SysUserController     : query user, body: {"nick":null,"current":null,"size":null}
+2020-06-22 00:58:50.898 DEBUG 3736 --- [http-nio-8888-exec-8] c.a.d.S.selectUserIncludeRoles           : ==>  Preparing: SELECT COUNT(1) FROM sys_user u LEFT JOIN sys_user_role ur ON u.uid = ur.user_id LEFT JOIN sys_role r ON ur.role_id = r.rid 
+2020-06-22 00:58:50.898 DEBUG 3736 --- [http-nio-8888-exec-8] c.a.d.S.selectUserIncludeRoles           : ==> Parameters: 
+2020-06-22 00:58:50.899 DEBUG 3736 --- [http-nio-8888-exec-8] c.a.d.S.selectUserIncludeRoles           : ==>  Preparing: select u.*, r.rid as role_rid, r.rname as role_rname, r.rdesc as role_rdesc, r.rval as role_rval, r.created as role_created, r.updated as role_updated from sys_user u left join sys_user_role ur on u.uid = ur.user_id left join sys_role r on ur.role_id = r.rid order by u.uid LIMIT 0,10 
+2020-06-22 00:58:50.899 DEBUG 3736 --- [http-nio-8888-exec-8] c.a.d.S.selectUserIncludeRoles           : ==> Parameters: 
+2020-06-22 00:58:50.901 DEBUG 3736 --- [http-nio-8888-exec-8] c.a.d.S.selectUserIncludeRoles           : <==      Total: 3
+2020-06-22 01:00:00.175  INFO 3736 --- [http-nio-8888-exec-2] com.abc.controller.AuthController        : get user info, sessionId: DE82E0A6BA30F163774A96B12532DD99
+2020-06-22 01:00:04.481  INFO 3736 --- [http-nio-8888-exec-1] com.abc.controller.AuthController        : user logout
+2020-06-22 01:00:36.291  INFO 3736 --- [http-nio-8888-exec-5] com.abc.controller.AuthController        : user login, body: {"uname":"xiaoliu","pwd":"123456"}
+2020-06-22 01:00:36.292 DEBUG 3736 --- [http-nio-8888-exec-5] com.abc.dao.SysUserMapper.selectList     : ==>  Preparing: SELECT uid AS `uid`,uname,nick,pwd,salt,`lock`,created,updated FROM sys_user WHERE (uname = ?) 
+2020-06-22 01:00:36.293 DEBUG 3736 --- [http-nio-8888-exec-5] com.abc.dao.SysUserMapper.selectList     : ==> Parameters: xiaoliu(String)
+2020-06-22 01:00:36.294 DEBUG 3736 --- [http-nio-8888-exec-5] com.abc.dao.SysUserMapper.selectList     : <==      Total: 1
+2020-06-22 01:00:36.295 DEBUG 3736 --- [http-nio-8888-exec-5] c.a.dao.SysRoleMapper.getRolesByUserId   : ==>  Preparing: SELECT r.rname,r.rval FROM sys_role r, sys_user_role ur WHERE r.rid = ur.role_id AND ur.user_id = ? 
+2020-06-22 01:00:36.295 DEBUG 3736 --- [http-nio-8888-exec-5] c.a.dao.SysRoleMapper.getRolesByUserId   : ==> Parameters: 986177923098808322(String)
+2020-06-22 01:00:36.296 DEBUG 3736 --- [http-nio-8888-exec-5] c.a.dao.SysRoleMapper.getRolesByUserId   : <==      Total: 1
+2020-06-22 01:00:36.297 DEBUG 3736 --- [http-nio-8888-exec-5] c.a.dao.SysPermMapper.getPermsByUserId   : ==>  Preparing: SELECT p.pname,p.pval FROM sys_perm p, sys_role_perm rp, sys_user_role ur WHERE p.pval = rp.perm_val AND ur.role_id = rp.role_id AND ur.user_id = ? 
+2020-06-22 01:00:36.297 DEBUG 3736 --- [http-nio-8888-exec-5] c.a.dao.SysPermMapper.getPermsByUserId   : ==> Parameters: 986177923098808322(String)
+2020-06-22 01:00:36.298 DEBUG 3736 --- [http-nio-8888-exec-5] c.a.dao.SysPermMapper.getPermsByUserId   : <==      Total: 1
+2020-06-22 01:00:36.299  INFO 3736 --- [http-nio-8888-exec-5] com.abc.controller.AuthController        : user login: xiaoliu, sessionId: 609964F4A2F3DC71AB8A69F80DD73DB0
+2020-06-22 01:00:36.324  INFO 3736 --- [http-nio-8888-exec-6] com.abc.controller.AuthController        : get user info, sessionId: 609964F4A2F3DC71AB8A69F80DD73DB0
+2020-06-22 01:00:42.833  INFO 3736 --- [http-nio-8888-exec-7] com.abc.controller.OptionController      : list role options
+2020-06-22 01:00:42.834 DEBUG 3736 --- [http-nio-8888-exec-7] com.abc.dao.SysRoleMapper.selectList     : ==>  Preparing: SELECT rid,rname,rval FROM sys_role 
+2020-06-22 01:00:42.834 DEBUG 3736 --- [http-nio-8888-exec-7] com.abc.dao.SysRoleMapper.selectList     : ==> Parameters: 
+2020-06-22 01:00:42.834  INFO 3736 --- [http-nio-8888-exec-8] com.abc.shiro.UserRealm                  : 获取角色权限信息: roles: [{"name":"超级管理员","val":"root"}], perms: [{"name":"所有权限","val":"*"}]
+2020-06-22 01:00:42.834  INFO 3736 --- [http-nio-8888-exec-8] com.abc.controller.SysUserController     : query user, body: {"nick":null,"current":null,"size":null}
+2020-06-22 01:00:42.835 DEBUG 3736 --- [http-nio-8888-exec-7] com.abc.dao.SysRoleMapper.selectList     : <==      Total: 11
+2020-06-22 01:00:42.837 DEBUG 3736 --- [http-nio-8888-exec-8] c.a.d.S.selectUserIncludeRoles           : ==>  Preparing: SELECT COUNT(1) FROM sys_user u LEFT JOIN sys_user_role ur ON u.uid = ur.user_id LEFT JOIN sys_role r ON ur.role_id = r.rid 
+2020-06-22 01:00:42.837 DEBUG 3736 --- [http-nio-8888-exec-8] c.a.d.S.selectUserIncludeRoles           : ==> Parameters: 
+2020-06-22 01:00:42.841 DEBUG 3736 --- [http-nio-8888-exec-8] c.a.d.S.selectUserIncludeRoles           : ==>  Preparing: select u.*, r.rid as role_rid, r.rname as role_rname, r.rdesc as role_rdesc, r.rval as role_rval, r.created as role_created, r.updated as role_updated from sys_user u left join sys_user_role ur on u.uid = ur.user_id left join sys_role r on ur.role_id = r.rid order by u.uid LIMIT 0,10 
+2020-06-22 01:00:42.841 DEBUG 3736 --- [http-nio-8888-exec-8] c.a.d.S.selectUserIncludeRoles           : ==> Parameters: 
+2020-06-22 01:00:42.842 DEBUG 3736 --- [http-nio-8888-exec-8] c.a.d.S.selectUserIncludeRoles           : <==      Total: 3
+2020-06-22 01:04:27.602  INFO 3736 --- [http-nio-8888-exec-2] com.abc.shiro.UserRealm                  : 获取角色权限信息: roles: [{"name":"超级管理员","val":"root"}], perms: [{"name":"所有权限","val":"*"}]
+2020-06-22 01:04:27.602  INFO 3736 --- [http-nio-8888-exec-2] com.abc.controller.SysUserController     : update user, body: {"uid":"1002748017179541505","uname":"xiaoli","nick":"小李","pwd":"123456","salt":"aem4EsAFae5rObEdZP4Xlw==","lock":null,"created":"2020-06-22T03:05:32.000+0000","updated":"2020-06-22T06:40:01.000+0000","roleList":[{"rid":"1002748319131680769","rname":"普通用户","rdesc":"具有一般的权限，不具备系统菜单权限1","rval":"common","created":"2018-06-02T03:06:44.000+0000","updated":"2018-06-02T03:10:57.000+0000"}],"roles":[],"perms":[],"idx":0,"pwd2":"123456"}
+2020-06-22 01:04:27.610 DEBUG 3736 --- [http-nio-8888-exec-2] com.abc.dao.SysUserMapper.updateById     : ==>  Preparing: UPDATE sys_user SET nick=?, pwd=?, salt=?, updated=? WHERE uid=? 
+2020-06-22 01:04:27.611 DEBUG 3736 --- [http-nio-8888-exec-2] com.abc.dao.SysUserMapper.updateById     : ==> Parameters: 小李(String), CfYHgebBc+dDTfi+1E8nD0EvgYcP/EVBu6GQute+6lE=(String), Y0DPV6faq9BWVuX2CBdCpg==(String), 2020-06-22 01:04:27.606(Timestamp), 1002748017179541505(String)
+2020-06-22 01:04:27.612 DEBUG 3736 --- [http-nio-8888-exec-2] com.abc.dao.SysUserMapper.updateById     : <==    Updates: 1
+2020-06-22 01:04:56.271  INFO 3736 --- [http-nio-8888-exec-5] com.abc.shiro.UserRealm                  : 获取角色权限信息: roles: [{"name":"超级管理员","val":"root"}], perms: [{"name":"所有权限","val":"*"}]
+2020-06-22 01:04:56.272  INFO 3736 --- [http-nio-8888-exec-5] com.abc.controller.SysRoleController     : query role, body: {"rname":null,"current":null,"size":null}
+2020-06-22 01:04:56.275 DEBUG 3736 --- [http-nio-8888-exec-5] com.abc.dao.SysRoleMapper.selectPage     : ==>  Preparing: SELECT COUNT(1) FROM sys_role 
+2020-06-22 01:04:56.275 DEBUG 3736 --- [http-nio-8888-exec-5] com.abc.dao.SysRoleMapper.selectPage     : ==> Parameters: 
+2020-06-22 01:04:56.277 DEBUG 3736 --- [http-nio-8888-exec-5] com.abc.dao.SysRoleMapper.selectPage     : ==>  Preparing: SELECT rid AS rid,rname,rdesc,rval,created,updated FROM sys_role ORDER BY created DESC, updated DESC LIMIT 0,10 
+2020-06-22 01:04:56.277 DEBUG 3736 --- [http-nio-8888-exec-5] com.abc.dao.SysRoleMapper.selectPage     : ==> Parameters: 
+2020-06-22 01:04:56.279 DEBUG 3736 --- [http-nio-8888-exec-5] com.abc.dao.SysRoleMapper.selectPage     : <==      Total: 10
+2020-06-22 01:04:59.153  INFO 3736 --- [http-nio-8888-exec-4] com.abc.shiro.UserRealm                  : 获取角色权限信息: roles: [{"name":"超级管理员","val":"root"}], perms: [{"name":"所有权限","val":"*"}]
+2020-06-22 01:04:59.154  INFO 3736 --- [http-nio-8888-exec-4] com.abc.controller.SysRoleController     : query role, body: {"rname":null,"current":2,"size":10}
+2020-06-22 01:04:59.155 DEBUG 3736 --- [http-nio-8888-exec-4] com.abc.dao.SysRoleMapper.selectPage     : ==>  Preparing: SELECT COUNT(1) FROM sys_role 
+2020-06-22 01:04:59.155 DEBUG 3736 --- [http-nio-8888-exec-4] com.abc.dao.SysRoleMapper.selectPage     : ==> Parameters: 
+2020-06-22 01:04:59.156 DEBUG 3736 --- [http-nio-8888-exec-4] com.abc.dao.SysRoleMapper.selectPage     : ==>  Preparing: SELECT rid AS rid,rname,rdesc,rval,created,updated FROM sys_role ORDER BY created DESC, updated DESC LIMIT 10,10 
+2020-06-22 01:04:59.156 DEBUG 3736 --- [http-nio-8888-exec-4] com.abc.dao.SysRoleMapper.selectPage     : ==> Parameters: 
+2020-06-22 01:04:59.157 DEBUG 3736 --- [http-nio-8888-exec-4] com.abc.dao.SysRoleMapper.selectPage     : <==      Total: 1
+2020-06-22 01:05:09.475  INFO 3736 --- [http-nio-8888-exec-6] com.abc.shiro.UserRealm                  : 获取角色权限信息: roles: [{"name":"超级管理员","val":"root"}], perms: [{"name":"所有权限","val":"*"}]
+2020-06-22 01:05:09.476  INFO 3736 --- [http-nio-8888-exec-6] com.abc.controller.SysRoleController     : query role, body: {"rname":null,"current":1,"size":10}
+2020-06-22 01:05:09.477 DEBUG 3736 --- [http-nio-8888-exec-6] com.abc.dao.SysRoleMapper.selectPage     : ==>  Preparing: SELECT COUNT(1) FROM sys_role 
+2020-06-22 01:05:09.477 DEBUG 3736 --- [http-nio-8888-exec-6] com.abc.dao.SysRoleMapper.selectPage     : ==> Parameters: 
+2020-06-22 01:05:09.478 DEBUG 3736 --- [http-nio-8888-exec-6] com.abc.dao.SysRoleMapper.selectPage     : ==>  Preparing: SELECT rid AS rid,rname,rdesc,rval,created,updated FROM sys_role ORDER BY created DESC, updated DESC LIMIT 0,10 
+2020-06-22 01:05:09.478 DEBUG 3736 --- [http-nio-8888-exec-6] com.abc.dao.SysRoleMapper.selectPage     : ==> Parameters: 
+2020-06-22 01:05:09.479 DEBUG 3736 --- [http-nio-8888-exec-6] com.abc.dao.SysRoleMapper.selectPage     : <==      Total: 10
+2020-06-22 01:05:19.401  INFO 3736 --- [http-nio-8888-exec-8] com.abc.shiro.UserRealm                  : 获取角色权限信息: roles: [{"name":"超级管理员","val":"root"}], perms: [{"name":"所有权限","val":"*"}]
+2020-06-22 01:05:19.402  INFO 3736 --- [http-nio-8888-exec-8] com.abc.controller.SysRoleController     : delete role, body: {"rid":"1002807427771899906"}
+2020-06-22 01:05:19.405 DEBUG 3736 --- [http-nio-8888-exec-8] com.abc.dao.SysRoleMapper.deleteById     : ==>  Preparing: DELETE FROM sys_role WHERE rid=? 
+2020-06-22 01:05:19.406 DEBUG 3736 --- [http-nio-8888-exec-8] com.abc.dao.SysRoleMapper.deleteById     : ==> Parameters: 1002807427771899906(String)
+2020-06-22 01:05:19.555 DEBUG 3736 --- [http-nio-8888-exec-8] com.abc.dao.SysRoleMapper.deleteById     : <==    Updates: 1
+2020-06-22 01:05:21.906  INFO 3736 --- [http-nio-8888-exec-9] com.abc.shiro.UserRealm                  : 获取角色权限信息: roles: [{"name":"超级管理员","val":"root"}], perms: [{"name":"所有权限","val":"*"}]
+2020-06-22 01:05:21.907  INFO 3736 --- [http-nio-8888-exec-9] com.abc.controller.SysRoleController     : delete role, body: {"rid":"1002807394460737537"}
+2020-06-22 01:05:21.907 DEBUG 3736 --- [http-nio-8888-exec-9] com.abc.dao.SysRoleMapper.deleteById     : ==>  Preparing: DELETE FROM sys_role WHERE rid=? 
+2020-06-22 01:05:21.908 DEBUG 3736 --- [http-nio-8888-exec-9] com.abc.dao.SysRoleMapper.deleteById     : ==> Parameters: 1002807394460737537(String)
+2020-06-22 01:05:21.908 DEBUG 3736 --- [http-nio-8888-exec-9] com.abc.dao.SysRoleMapper.deleteById     : <==    Updates: 1
+2020-06-22 01:05:24.117  INFO 3736 --- [http-nio-8888-exec-10] com.abc.shiro.UserRealm                  : 获取角色权限信息: roles: [{"name":"超级管理员","val":"root"}], perms: [{"name":"所有权限","val":"*"}]
+2020-06-22 01:05:24.117  INFO 3736 --- [http-nio-8888-exec-10] com.abc.controller.SysRoleController     : delete role, body: {"rid":"1002807369559154689"}
+2020-06-22 01:05:24.118 DEBUG 3736 --- [http-nio-8888-exec-10] com.abc.dao.SysRoleMapper.deleteById     : ==>  Preparing: DELETE FROM sys_role WHERE rid=? 
+2020-06-22 01:05:24.119 DEBUG 3736 --- [http-nio-8888-exec-10] com.abc.dao.SysRoleMapper.deleteById     : ==> Parameters: 1002807369559154689(String)
+2020-06-22 01:05:24.119 DEBUG 3736 --- [http-nio-8888-exec-10] com.abc.dao.SysRoleMapper.deleteById     : <==    Updates: 1
+2020-06-22 01:05:28.066  INFO 3736 --- [http-nio-8888-exec-3] com.abc.shiro.UserRealm                  : 获取角色权限信息: roles: [{"name":"超级管理员","val":"root"}], perms: [{"name":"所有权限","val":"*"}]
+2020-06-22 01:05:28.066  INFO 3736 --- [http-nio-8888-exec-3] com.abc.controller.SysRoleController     : delete role, body: {"rid":"1002807344665960449"}
+2020-06-22 01:05:28.067 DEBUG 3736 --- [http-nio-8888-exec-3] com.abc.dao.SysRoleMapper.deleteById     : ==>  Preparing: DELETE FROM sys_role WHERE rid=? 
+2020-06-22 01:05:28.067 DEBUG 3736 --- [http-nio-8888-exec-3] com.abc.dao.SysRoleMapper.deleteById     : ==> Parameters: 1002807344665960449(String)
+2020-06-22 01:05:28.068 DEBUG 3736 --- [http-nio-8888-exec-3] com.abc.dao.SysRoleMapper.deleteById     : <==    Updates: 1
+2020-06-22 01:05:34.818  INFO 3736 --- [http-nio-8888-exec-2] com.abc.controller.AuthController        : get user info, sessionId: 609964F4A2F3DC71AB8A69F80DD73DB0
+2020-06-22 01:05:34.987  INFO 3736 --- [http-nio-8888-exec-1] com.abc.shiro.UserRealm                  : 获取角色权限信息: roles: [{"name":"超级管理员","val":"root"}], perms: [{"name":"所有权限","val":"*"}]
+2020-06-22 01:05:34.987  INFO 3736 --- [http-nio-8888-exec-1] com.abc.controller.SysRoleController     : query role, body: {"rname":null,"current":null,"size":null}
+2020-06-22 01:05:34.989 DEBUG 3736 --- [http-nio-8888-exec-1] com.abc.dao.SysRoleMapper.selectPage     : ==>  Preparing: SELECT COUNT(1) FROM sys_role 
+2020-06-22 01:05:34.989 DEBUG 3736 --- [http-nio-8888-exec-1] com.abc.dao.SysRoleMapper.selectPage     : ==> Parameters: 
+2020-06-22 01:05:34.991 DEBUG 3736 --- [http-nio-8888-exec-1] com.abc.dao.SysRoleMapper.selectPage     : ==>  Preparing: SELECT rid AS rid,rname,rdesc,rval,created,updated FROM sys_role ORDER BY created DESC, updated DESC LIMIT 0,10 
+2020-06-22 01:05:34.991 DEBUG 3736 --- [http-nio-8888-exec-1] com.abc.dao.SysRoleMapper.selectPage     : ==> Parameters: 
+2020-06-22 01:05:34.992 DEBUG 3736 --- [http-nio-8888-exec-1] com.abc.dao.SysRoleMapper.selectPage     : <==      Total: 7
+2020-06-22 01:41:44.340  INFO 3736 --- [http-nio-8888-exec-6] com.abc.controller.AuthController        : user logout
