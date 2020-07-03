@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">StudentRCS</string>
+    <string name="teacher">教师</string>
+    <string name="student">学生</string>
+    <string name="register">签到</string>
+    <string name="logout">注销</string>
+</resources>
